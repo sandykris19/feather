@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feather | Profile</title>
+    <link rel="stylesheet" href="/style_profile.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="one">
+        <nav class="navbar">
+            <ul class="links">
+                <li><a href="/user/explore">Explore</a></li>
+                <li><a href="/user/articles">Your articles</a></li>
+                <li><a href="/user/new">Create a post</a></li>
+                <li><a href="/user/profile">Profile</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+        <h1><span class="title"><%= name.charAt(0).toUpperCase()+name.slice(1) %>'s Profile</span></h1>
+        <h2><span class="sub-title">You've published <span style="color: orangered;"><%= count %></span> articles.</span></h2>
+        <h4 style="margin-left: 1rem; margin-top: 2rem;"><a href="/auth/logout">Logout?</a></h4>
+    </div>
+</body>
+
+</html>

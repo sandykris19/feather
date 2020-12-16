@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+*::selection{
+    color: white;
+    background: orangered;
+}
+.one{
+    background-color: whitesmoke;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    position: sticky;
+    top: 0;
+    border-bottom: 2px solid black;
+}
+.links {
+    display: flex;
+    margin-right: 12rem;
+    font-size: 1.5rem;
+    margin-top: .8rem;
+}
+.links li{
+    list-style: none;
+}
+.links li a {
+    text-decoration: none;
+    margin:  .5rem;
+    padding: .4rem;
+    color: black;
+}
+.links li a:hover{
+    border-bottom: 4px solid orangered;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar h3 {
+    font-size: 2rem;
+    margin-left: 5rem;
+    margin-top: .8rem;
+}
+
+.navbar ul {
+    margin-left: 3rem;
+}
+
+.content {
+    margin: 2% auto;
+    width: 900px;
+}
+
+.title{
+    font-size: 3rem;
+}
+.subtitle{
+    font-size: 1.5rem;
+}
+.text {
+    font-size: 1.3rem;
+}

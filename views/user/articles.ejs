@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feather | Articles</title>
+    <link rel="stylesheet" href="/styles2.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="grids">
+
+        <div class="two">
+            <% let name = articles.email.split('@')[0] %>
+            <% name = name.charAt(0).toUpperCase()+name.slice(1) %>
+            <% articles.articles.forEach((a)=>{ %>
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h4 class="card-title"><%= a.title %> </h4>
+                    <div class="card-subtitle text-muted mb-2 text-truncate"><%= a.subtitle %> <br><small>published by
+                            <%= name %> at
+                            <%= a.createdAt.toLocaleString() %> </small>
+                    </div>
+                    <div class="card-text mb-3 text-truncate">
+                        <p>
+                            <%= a.markdown %>
+                        </p>
+                    </div>
+                    <a href="/user/read/<%= a._id %>" class="btn btn-primary" target="_blank">Read more</a>
+                    <a href="/user/edit/<%= a._id %>" class="btn btn-secondary">Edit</a>
+                    <form action="/user/delete/<%= a._id %>" class="d-inline">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            </div>
+            <% }) %>
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h4 class="card-title">Example title</h4>
+                    <div class="card-subtitle mb-2">Example subtitle</div>
+                    <div class="card-text mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque,
+                        nesciunt. Laborum quasi velit cupiditate dolore vel voluptatum nesciunt at sit molestiae saepe
+                        dolores, modi necessitatibus molestias dolorum illo doloremque aspernatur.</div>
+                    <a href="" class="btn btn-primary">Read more</a>
+                </div>
+            </div>
+        </div>
+        <div class="three">
+            <p style="color: white;">Hope you had fun.. <a href="/auth/logout" style="color: white;">Logout?</a></p>
+            <h4 style="color: white;">Recently published articles by people around the world.</h4>
+            <% public.forEach((p)=>{ %>
+            <div class="card mt-4" style="height: 12rem;">
+                <div class="card-body">
+                    <h4 class="card-title text-truncate" style="margin-top: -1px;"><%= p.title %> </h4>
+                    <div class="card-subtitle text-muted mb-1"
+                        style="height: 50px; word-wrap: break-word; overflow: hidden;">
+                        <%= p.subtitle %> </div>
+                    <small><%= p.createdAt.toLocaleString() %></small>
+                    <br>
+                    <a href="/user/pread/<%= p._id %>" class="btn btn-primary mt-3">Read more</a>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+        <div class="one">
+            <nav class="navbar">
+                <ul class="links">
+                    <li><a href="/user/explore">Explore</a></li>
+                    <li><a href="/user/articles">Your articles</a></li>
+                    <li><a href="/user/new">Create a post</a></li>
+                    <li><a href="/user/profile">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</body>
+
+</html>

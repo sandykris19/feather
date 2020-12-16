@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feather | Explore</title>
+    <link rel="stylesheet" href="/explore.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="grids">
+
+        <div class="two">
+            <% articles.forEach((a)=>{ %>
+            <div class="card mt-4">
+                <div class="card-body">
+                    <% const name = a.profile.charAt(0).toUpperCase()+a.profile.slice(1) %>
+                    <h4 class="card-title"><%= a.title %> </h4>
+                    <div class="card-subtitle text-muted mb-2"><%= a.subtitle %> <br><small
+                            style="color: orangered;">published by
+                            <%= name %> at <%= a.createdAt.toLocaleString() %> </small></div>
+                    <div class="card-text mb-3">
+                        <p style="word-wrap: break-word; overflow: hidden;">
+                            <%- a.markdown %>
+                        </p>
+                    </div>
+                    <a href="/user/pread/<%= a._id %> " class="btn btn-primary" target="_blank">Read more</a>
+                    </form>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+        <div class="one">
+            <nav class="navbar">
+                <ul class="links">
+                    <li><a href="/user/explore">Explore</a></li>
+                    <li><a href="/user/articles">Your articles</a></li>
+                    <li><a href="/user/new">Create a post</a></li>
+                    <li><a href="/user/profile">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</body>
+
+</html>

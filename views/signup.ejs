@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feather | Signup</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="grids">
+        <div class="one">
+            <nav class="navbar">
+                <h3 class="main">feather</h3>
+                <ul class="links">
+                    <li><a href="/">Login</a></li>
+                    <li><a href="/signup">Signup</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="two">
+            <div class="twocontainer">
+                <p class="heading">feather.md lighter than actual feather</p>
+                <p class="about">Share your ideas to the world</p>
+                <p class="sub">with markdown as text editor.</p>
+                <img src="/1.svg" alt="" style="height: 250px; width: 250px; float: right; margin-top: 2.6rem;">
+            </div>
+        </div>
+        <div class="three">
+            <h2>feather<span style="color: orangered;">.md</span></h2>
+            <h3>Welcome aboard!</h3>
+            <form action="/auth/signup" method="POST">
+                <div>
+                    <%= emails %>
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" name="email" class="form-control shadow-none">
+                </div>
+                <div>
+                    <%= passwords %>
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control shadow-none">
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Sign up</button><small>&nbsp;&nbsp;&nbsp;back to <a
+                        href="/">login</a></small>
+            </form>
+            <p class="quotes" style="font-size: 1rem; max-height: 100px;"></p>
+        </div>
+    </div>
+    <script src="/quote.js"></script>
+</body>
+
+</html>

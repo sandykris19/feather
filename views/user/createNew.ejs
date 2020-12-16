@@ -1,0 +1,78 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feather | New</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles3.css">
+</head>
+
+<body>
+    <div class="one">
+        <nav class="navbar">
+            <ul class="links">
+                <li><a href="/user/explore">Explore</a></li>
+                <li><a href="/user/articles">Your articles</a></li>
+                <li><a href="/user/new">Create a post</a></li>
+                <li><a href="/user/profile">Profile</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <h1 class="mb-4">New Markdown Article</h1>
+        <form action="/user/new" method="POST">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" class="form-control shadow-none" style="width: 700px;"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="subtitle">Sub-title</label>
+                <input type="text" name="subtitle" id="subtitle" class="form-control shadow-none" required>
+            </div>
+            <div class="md-help">
+                <h6>Click here for markdown cheatsheet => <a href=""></a></h6>
+                <button>.md</button>
+            </div>
+            <div class="md-text">
+                <pre>
+                    Heading	# H1, ## H2, ### H3
+                    Bold	**bold text**
+                    Italic	*italicized text*
+                    Ordered List	1. First item
+                                    2. Second item
+                                    3. Third item
+                    Unordered List	- First item
+                                    - Second item
+                                    - Third item
+                    Link	[title](https://www.example.com)
+                    Image	![alt text](image.jpg)
+                    Task List	- [x] Write the press release
+                                - [ ] Update the website
+                                - [ ] Contact the media
+                    for more <a href="https://www.markdownguide.org/cheat-sheet/" target="_blank">markdownguide.org</a>
+                </pre>
+            </div>
+            <h4 style="float: right;">Preview</h4>
+            <div class="form-group">
+                <label for="markdown">Normal text</label>
+                <textarea name="markdown" id="markdown" cols="20" rows="20" class="form-control shadow-none" required
+                    style="width: 50%;"></textarea>
+            </div>
+
+            <div class="marked">
+            </div>
+            <br>
+            <a href="/user/articles" class="btn btn-secondary">Cancel</a>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="/client.js"></script>
+</body>
+
+</html>

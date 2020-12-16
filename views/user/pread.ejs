@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feather | Public</title>
+    <link rel="stylesheet" href="/read.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="one">
+        <nav class="navbar">
+            <ul class="links">
+                <li><a href="/user/explore">Explore</a></li>
+                <li><a href="/user/articles">Your articles</a></li>
+                <li><a href="/user/new">Create a post</a></li>
+                <li><a href="/user/profile">Profile</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+        <% const name = articles.profile.charAt(0).toUpperCase()+articles.profile.slice(1) %>
+        <p><span class="title"><%= articles.title %> </span></p>
+        <p><span class="subtitle"><%= articles.subtitle %> <br>
+                <small>published by <span style="color: orangered;"><%= name %></span> at
+                    <%= articles.createdAt.toLocaleString() %> </small>
+            </span></p>
+        <p><span class="text" style="font-weight: bolder !important;"><%- articles.markdown %> </span></p>
+    </div>
+</body>
+
+</html>
