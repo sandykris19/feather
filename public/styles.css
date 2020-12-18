@@ -117,3 +117,34 @@
     margin-top: 3rem;
 }
 
+@media screen and (max-width: 768px){
+    .twocontainer img{
+        width: 350px !important;
+        margin-left: -4rem !important;
+        margin-top: -2rem !important;
+    }
+    .navbar h3{
+        margin-left: 1rem !important;
+    }
+    .twocontainer .heading{
+        font-size: 1rem !important;
+        margin-left: -4rem !important;
+    }
+    .twocontainer .about {
+        font-size: 2rem !important;
+        margin-left: -4rem !important;
+    }
+    .twocontainer .sub {
+        font-size: 1rem !important;
+        margin-left: -4rem !important;
+    }
+    .three {
+        margin-top: 34rem !important;
+        margin-left: -17rem !important;
+        width: 370px;
+        height: 500px;
+    }
+    .alert{
+        display: block;
+    }
+}

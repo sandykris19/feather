@@ -1,4 +1,5 @@
 console.log("Client side js running");
+
 let quotes = [
   {
     text: "The only people who never fail are those who never try.",
