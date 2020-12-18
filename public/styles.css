@@ -116,6 +116,14 @@
     margin-left: 6rem;
     margin-top: 3rem;
 }
+.alert{
+    background-color: #fff3cd;
+    width: 360px;
+    height: 90px;
+    margin-top: -1.5rem;
+    margin-left: -4rem;
+    display: none;
+}
 
 @media screen and (max-width: 768px){
     .twocontainer img{
