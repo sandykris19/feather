@@ -23,7 +23,7 @@
                             <%= name %> at <%= a.createdAt.toLocaleString() %> </small></div>
                     <div class="card-text mb-3">
                         <p style="word-wrap: break-word; overflow: hidden;">
-                            <%- a.markdown %>
+                            <%- a.markdown.slice(0,150)+'...Click on Read more' %>
                         </p>
                     </div>
                     <a href="/user/pread/<%= a._id %> " class="btn btn-primary" target="_blank">Read more</a>
