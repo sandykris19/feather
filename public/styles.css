@@ -118,8 +118,9 @@
 }
 .alert{
     background-color: #fff3cd;
-    width: 360px;
-    height: 90px;
+    font-size: .9rem;
+    width: 300px;
+    height: 100px;
     margin-top: -1.5rem;
     margin-left: -4rem;
     display: none;
@@ -127,7 +128,7 @@
 
 @media screen and (max-width: 768px){
     .twocontainer img{
-        width: 350px !important;
+        width: 300px !important;
         margin-left: -4rem !important;
         margin-top: -2rem !important;
     }
@@ -139,7 +140,7 @@
         margin-left: -4rem !important;
     }
     .twocontainer .about {
-        font-size: 2rem !important;
+        font-size: 1.8rem !important;
         margin-left: -4rem !important;
     }
     .twocontainer .sub {
@@ -147,12 +148,27 @@
         margin-left: -4rem !important;
     }
     .three {
-        margin-top: 34rem !important;
-        margin-left: -17rem !important;
-        width: 370px;
+        margin-top: 36rem !important;
+        margin-left: -16rem !important;
+        width: 330px;
         height: 500px;
+    }
+    .three h3{
+        font-size: 1rem;
     }
     .alert{
         display: block;
     }
+    .main{
+        font-size: smaller;
+    }
+    .links li a{
+        font-size: smaller;
+    }
+    .twocontainer .signupimg{
+        height: 150px !important;
+        margin-top: 1rem !important;
+        margin-left: 100px !important;
+    }
+
 }
