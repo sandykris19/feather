@@ -1504,3 +1504,10 @@ window.addEventListener("load", () => {
   let result = updated[random];
   quotesPara.innerHTML = `${result.text} - ${result.from}`;
 });
+
+var tooltipTriggerList = [].slice.call(
+  document.querySelectorAll('[data-bs-toggle="tooltip"]')
+);
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl);
+});
